@@ -1,0 +1,45 @@
+# .gitignore para proyectos .NET / Razor Pages
+
+# Archivos de compilación
+bin/
+obj/
+
+# Archivos de usuario de Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de configuración local
+.vs/
+launchSettings.json
+
+# Archivos de paquetes
+*.nupkg
+# Paquetes NuGet
+packages/
+# Archivos de bloqueo de dependencias
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos de logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de sistema
+Thumbs.db
+Desktop.ini
+
+# Archivos de publicación
+publish/
+
+# Archivos de configuración de Rider
+.idea/
+*.sln.iml
+
+# Archivos de configuración de VS Code
+.vscode/
