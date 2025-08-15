@@ -4,6 +4,7 @@ namespace Proyecto_Inventario.Models;
 
 public class Marca
 {
+    [Key]
     public int MarcaID { get; set; }
 
     [Required]

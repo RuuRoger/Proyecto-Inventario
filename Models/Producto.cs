@@ -1,9 +1,11 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Proyecto_Inventario.Models;
 
 public class Producto
 {
+    [Key]
     public int ProductoID { get; set; }
 
     [Required]
@@ -11,6 +13,7 @@ public class Producto
 
     public string? Descripcion { get; set; }
 
+    [ForeignKey("Marca")]
     public int MarcaId { get; set; }
 
     public virtual Marca? Marca { get; set; }
