@@ -4,7 +4,7 @@ namespace Proyecto_Inventario.Models;
 
 public class Marca
 {
-    public int Id { get; set; }
+    public int MarcaID { get; set; }
 
     [Required]
     public string Nombre { get; set; } = string.Empty;
