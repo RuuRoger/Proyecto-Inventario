@@ -10,7 +10,7 @@ public class InventarioDbContext : DbContext
     {
     }
 
-    public DbSet<Departamento> Departamentos { get; set; }
-    public DbSet<Marca> Marcas { get; set; }
-    public DbSet<Producto> Productos { get; set; }
+    public DbSet<Departamento> Departamento { get; set; }
+    public DbSet<Marca> Marca { get; set; }
+    public DbSet<Producto> Producto { get; set; }
 }
