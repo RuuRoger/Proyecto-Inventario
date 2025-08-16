@@ -11,6 +11,6 @@ public class InventarioDbContext : DbContext
     }
 
     public DbSet<Departamento> Departamento { get; set; }
-    public DbSet<Marca> Marca { get; set; }
+    public DbSet<MarcaModel> Marca { get; set; }
     public DbSet<Producto> Producto { get; set; }
 }

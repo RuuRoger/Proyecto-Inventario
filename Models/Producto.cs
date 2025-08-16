@@ -16,7 +16,7 @@ public class Producto
     [ForeignKey("Marca")]
     public int MarcaId { get; set; }
 
-    public virtual Marca? Marca { get; set; }
+    public virtual MarcaModel? Marca { get; set; }
     
     public decimal Precio { get; set; }
 }
