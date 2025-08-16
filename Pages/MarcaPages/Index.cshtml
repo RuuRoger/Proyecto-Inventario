@@ -1,0 +1,42 @@
+@page
+@model Proyecto_Inventario.Pages.Marca.IndexModel
+@{
+    ViewData["Title"] = "Listado de Marcas";
+}
+
+<h1>Listado de Marcas</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Crear nueva marca</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @if (Model.MarcasViewModel != null && Model.MarcasViewModel.Count > 0)
+    {
+        foreach (var marca in Model.MarcasViewModel)
+        {
+            <tr>
+                <td>@marca.MarcaID</td>
+                <td>@marca.Nombre</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@marca.MarcaID" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-page="Details" asp-route-id="@marca.MarcaID" class="btn btn-sm btn-info">Detalles</a>
+                    <a asp-page="Delete" asp-route-id="@marca.MarcaID" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr><td colspan="3">No hay marcas registradas.</td></tr>
+    }
+    </tbody>
+</table>

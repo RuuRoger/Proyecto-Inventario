@@ -1,0 +1,22 @@
+@page
+@model Proyecto_Inventario.Pages.Marca.CreateModel
+@{
+    ViewData["Title"] = "Crear Marca";
+}
+
+<h1>Crear nueva marca</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="MarcaForm.Nombre" class="form-label"></label>
+        <input asp-for="MarcaForm.Nombre" class="form-control" />
+        <span asp-validation-for="MarcaForm.Nombre" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@* Esto permite poder visualizar en la propia pagina los erreores en el formulario *@
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
